@@ -1,7 +1,8 @@
 # Building a SOC + Honeynet in Azure (Live Traffic)
-![Cloud Honeynet / SOC](https://i.imgur.com/ZWxe03e.jpg)
+![Cloud Architecture](https://github.com/ryansays/Cloud-SOC/assets/173171546/56cde68c-a542-4e9b-a889-70bf0835c092)
 
-## Introduction
+
+## Project Details
 
 In this project, I build a mini honeynet in Azure and ingest log sources from various resources into a Log Analytics workspace, which is then used by Microsoft Sentinel to build attack maps, trigger alerts, and create incidents. I measured some security metrics in the insecure environment for 24 hours, apply some security controls to harden the environment, measure metrics for another 24 hours, then show the results below. The metrics we will show are:
 
@@ -32,9 +33,10 @@ For the "BEFORE" metrics, all resources were originally deployed, exposed to the
 For the "AFTER" metrics, Network Security Groups were hardened by blocking ALL traffic with the exception of my admin workstation, and all other resources were protected by their built-in firewalls as well as Private Endpoint
 
 ## Attack Maps Before Hardening / Security Controls
-![NSG Allowed Inbound Malicious Flows](https://i.imgur.com/1qvswSX.png)<br>
-![Linux Syslog Auth Failures](https://i.imgur.com/G1YgZt6.png)<br>
-![Windows RDP/SMB Auth Failures](https://i.imgur.com/ESr9Dlv.png)<br>
+<img width="1164" alt="BEFORE_nsg-malicious-allowed-in" src="https://github.com/ryansays/Cloud-SOC/assets/173171546/f884c398-2629-44d3-a540-d999cdae05b0"><br>
+<img width="1150" alt="BEFORE-windows-rdp-smb-auth-fail" src="https://github.com/ryansays/Cloud-SOC/assets/173171546/1db3acfa-b592-4406-958e-49deca3b3bee"><br>
+<img width="1283" alt="BEFORE-linux-ssh-auth-fail" src="https://github.com/ryansays/Cloud-SOC/assets/173171546/a5991750-2a21-46d2-82f5-e51b3648c7b5"><br>
+
 
 ## Metrics Before Hardening / Security Controls
 
